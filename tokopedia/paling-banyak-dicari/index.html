@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Paling Banyak Dicari</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.0/css/bulma.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    
+    <div id="app">
+        <nav class="level">
+            <div class="level-left">
+                <div class="level-item">
+                    <h1 class="title is-3">Paling Banyak Dicari</h1>
+                </div>
+            </div>
+            <div class="level-right">
+                <div class="level-item refresh" @click="animateIcon">
+                    <i id="animating-icon" class="fas fa-redo-alt "></i>
+                    <h1 class="title is-5">Muat Lainnya</h1>
+                </div>
+            </div>
+        </nav>
+        <div class="columns">
+            <product v-for="product in products" 
+                     :img_url="product.img_url" 
+                     :name="product.name" 
+                     :desc="product.desc"
+                     :key="product.key">
+            </product>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>

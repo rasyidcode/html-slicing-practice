@@ -1,0 +1,16 @@
+body { padding: 20px; }
+
+.card.p12 {
+    padding: 12px;
+}
+
+.refresh {
+    color: #03ac0e;
+}
+    .refresh h1 {
+        margin-left: 8px;
+        color: #03ac0e;
+    }
+.refresh:hover {
+    cursor: pointer;
+}
