@@ -58,6 +58,7 @@ new Vue({
         animateIcon() {
             document.querySelector("#animating-icon").classList.add('animated')
             document.querySelector("#animating-icon").classList.add('rollIn')
+            console.log('test aja')
         }
     }
 })
